@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="474.0" prefWidth="425.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.unlv.MIS768.Assignment_5.ConferenceRegistrationController">
+   <children>
+      <GridPane layoutX="-82.0" layoutY="-71.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="400.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane prefHeight="469.0" prefWidth="380.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="290.0" minHeight="10.0" prefHeight="183.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="290.0" minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="290.0" minHeight="10.0" prefHeight="93.0" valignment="TOP" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane prefHeight="61.0" prefWidth="357.0" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="300.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="planCheckBox" mnemonicParsing="false" onAction="#checkBoxListener" prefHeight="17.0" prefWidth="176.0" text="Current UNLV Student" textFill="#3c3b3b" />
+                        <CheckBox fx:id="dinnerCheckBox" mnemonicParsing="false" onAction="#checkBoxListener" prefHeight="32.0" prefWidth="331.0" text="Attend opening dinner &amp; keynote speech ($30)" textFill="#3c3b3b" wrapText="true" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="185.0" prefWidth="331.0" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="futureWebCheckBox" mnemonicParsing="false" onAction="#checkBoxListener" prefHeight="17.0" prefWidth="224.0" text="The Future of the Web - $295" textFill="#3c3b3b" GridPane.rowIndex="2" />
+                        <Label prefHeight="23.0" prefWidth="301.0" text="Select all workshops you would like to attend:" textFill="#5b5555">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="ecommerceCheckBox" mnemonicParsing="false" onAction="#checkBoxListener" prefHeight="17.0" prefWidth="241.0" text="Introduction to E-Commerce - $295" textFill="#3c3b3b" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="advancedJavaCheckBox" mnemonicParsing="false" onAction="#checkBoxListener" prefHeight="17.0" prefWidth="244.0" text="Advanced Java Programming - $395" textFill="#3c3b3b" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="networkCheckBox" mnemonicParsing="false" onAction="#checkBoxListener" prefHeight="17.0" prefWidth="206.0" text="Network Security - $395" textFill="#3c3b3b" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Label prefHeight="19.0" prefWidth="322.0" text="Welcome to UNLV's MIS Conference Registration" textFill="#051252c3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="223.0" text="Please review your total charges here:" textFill="#5b5555" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="chargesTextArea" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" prefWidth="383.0" style="-fx-border-color: mintcream; -fx-control-inner-background: darkcyan; -fx-text-fill: mintcream;" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                  <GridPane prefHeight="42.0" prefWidth="350.0" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="nameTextField" maxWidth="-Infinity" onAction="#checkBoxListener" onKeyPressed="#checkBoxListener" onKeyReleased="#checkBoxListener" onKeyTyped="#checkBoxListener" prefHeight="25.0" prefWidth="174.0" promptText="Attendee Name" />
+                        <Button defaultButton="true" onAction="#buttonListener" text="_Reset All" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="20.0" right="15.0" top="15.0" />
+   </padding>
+</AnchorPane>
