@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" stylesheets="@../../MyStyles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="momsfood.FXMLandControllers.OrderController">
+   <children>
+      <HBox layoutX="12.0" prefHeight="67.0" prefWidth="804.0">
+         <children>
+            <Button fx:id="logoButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#changeToHomePage" prefHeight="79.0" prefWidth="160.0" styleClass="red">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/Y:/Spring%202019/MIS%20768/Group%20Project/src/momsfood/FXMLandControllers/Mom_sFoodLogo(Small).png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Button>
+            <Button fx:id="searchFoodButton" mnemonicParsing="false" onAction="#changeToTheSearchPage" prefHeight="67.0" prefWidth="222.0" styleClass="red" stylesheets="@../MyStyles.css" text="Search Foods">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#00000074" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="profilButton" mnemonicParsing="false" onAction="#changeToProfilePage" prefHeight="67.0" prefWidth="221.0" styleClass="red" stylesheets="@MyStyles.css" text="Profile">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="cartButton" mnemonicParsing="false" onAction="#changeToOrderpage" prefHeight="67.0" prefWidth="223.0" styleClass="red" text="Your Cart">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="red">
+                     <image>
+                        <Image url="@cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="355.0" layoutY="67.0" prefHeight="35.0" prefWidth="106.0" styleClass="label11" text="Check-Out" />
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="115.0" prefHeight="321.0" prefWidth="537.0">
+        <columns>
+          <TableColumn fx:id="foodColumn" prefWidth="162.0" text="Food" />
+          <TableColumn fx:id="cookColumn" prefWidth="158.0" text="Cook" />
+            <TableColumn fx:id="priceColumn" prefWidth="65.0" text="Price" />
+            <TableColumn fx:id="quantityColumn" prefWidth="71.0" text="Quantity" />
+            <TableColumn fx:id="subtotalColumn" text="Subtotal" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="585.0" layoutY="151.0" prefHeight="290.0" prefWidth="211.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="64.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="147.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="25.0" prefWidth="121.0" styleClass="label11" stylesheets="@MyStyles.css" text="Total:" GridPane.rowIndex="4" />
+            <Label styleClass="label11" text="Delivery:" GridPane.rowIndex="2" />
+            <Label styleClass="label11" text="Discount:" GridPane.rowIndex="1" />
+            <Label styleClass="label11" text="Subtotal:" />
+            <Label styleClass="label11" text="Tax:" GridPane.rowIndex="3" />
+            <Label fx:id="subtotalLabel" styleClass="label11" GridPane.columnIndex="1" />
+            <Label fx:id="discountLabel" styleClass="label11" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="deliveryLabel" styleClass="label11" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="taxLabel" styleClass="label11" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="totalLabel" styleClass="label11" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Button fx:id="deleteItemButton" layoutX="152.0" layoutY="481.0" mnemonicParsing="false" onAction="#deleteItems" styleClass="red" text="Delete Item" />
+      <Button fx:id="discountButton" layoutX="623.0" layoutY="94.0" mnemonicParsing="false" onAction="#discountButton" prefHeight="42.0" prefWidth="162.0" styleClass="red11" text="I have a discount code!" />
+      <Button fx:id="submitButton" layoutX="505.0" layoutY="477.0" mnemonicParsing="false" onAction="#submitListener" prefHeight="42.0" prefWidth="131.0" styleClass="red" text="Submit me!" />
+      <Button fx:id="printReceiptButton" layoutX="651.0" layoutY="477.0" mnemonicParsing="false" onAction="#printReceiptListener" prefHeight="42.0" prefWidth="150.0" styleClass="grey" text="Print my receipt" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="481.0" mnemonicParsing="false" onAction="#backButtonListener" prefHeight="35.0" prefWidth="115.0" styleClass="red" text="Back" />
+   </children>
+</AnchorPane>

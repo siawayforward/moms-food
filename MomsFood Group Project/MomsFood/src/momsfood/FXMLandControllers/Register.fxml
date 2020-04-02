@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" stylesheets="@MyStyles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="momsfood.FXMLandControllers.RegisterController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="800.0" opacity="0.44" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@artesanal-pizza-cheese-close-up.jpg" />
+         </image></ImageView>
+      <Label layoutX="335.0" layoutY="89.0" prefHeight="21.0" prefWidth="131.0" styleClass="label11" text="Mom's Food">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="submitButton" layoutX="552.0" layoutY="443.0" mnemonicParsing="false" onAction="#ButtonListener" onMousePressed="#ButtonListener" prefHeight="35.0" prefWidth="111.0" styleClass="red" text="Submit" />
+      <GridPane layoutX="233.0" layoutY="137.0" prefHeight="242.0" prefWidth="418.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="446.0" minWidth="10.0" prefWidth="247.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="247.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="First Name:">
+               <styleClass>
+                  <String fx:value="label11" />
+                  <String fx:value="labelregister" />
+               </styleClass></Label>
+            <Label text="Last Name:" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="label11" />
+                  <String fx:value="labelregister" />
+               </styleClass></Label>
+            <Label text="Email-Address:" GridPane.rowIndex="2">
+               <styleClass>
+                  <String fx:value="label11" />
+                  <String fx:value="labelregister" />
+               </styleClass></Label>
+            <Label text="Phone Number:" GridPane.rowIndex="4">
+               <styleClass>
+                  <String fx:value="label11" />
+                  <String fx:value="labelregister" />
+               </styleClass></Label>
+            <Label text="Username:" GridPane.rowIndex="5">
+               <styleClass>
+                  <String fx:value="label11" />
+                  <String fx:value="labelregister" />
+               </styleClass></Label>
+            <Label text="Password:" GridPane.rowIndex="6">
+               <styleClass>
+                  <String fx:value="label11" />
+                  <String fx:value="labelregister" />
+               </styleClass></Label>
+            <Label text="Confirm Password:" GridPane.rowIndex="7">
+               <styleClass>
+                  <String fx:value="label11" />
+                  <String fx:value="labelregister" />
+               </styleClass></Label>
+            <TextField fx:id="firstnameTextField" styleClass="pink" GridPane.columnIndex="1" />
+            <TextField fx:id="lastnameTextField" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="emailTextField" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="physicalAddressTextField" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="phoneTextField" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="usernameTextField" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="passwordTextField" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label styleClass="label11" text="Physical Address" GridPane.rowIndex="3" />
+            <PasswordField fx:id="confirmPasswordTextField" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <Button fx:id="backButton" layoutX="75.0" layoutY="448.0" mnemonicParsing="false" onAction="#backButtonListener" prefHeight="35.0" prefWidth="131.0" styleClass="red" text="Back" />
+   </children>
+</AnchorPane>
