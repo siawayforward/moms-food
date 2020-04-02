@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="momsfood.FXMLandControllers.HomepageController">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" layoutX="-3.0" layoutY="154.0" prefHeight="462.0" prefWidth="806.0" style="-fx-background-color: transparent;">
+         <content>
+            <GridPane prefHeight="1068.0" prefWidth="810.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="34.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="353.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.0" minWidth="10.0" prefWidth="23.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="258.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="142.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="102.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="193.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="216.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="236.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="80.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="236.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox fx:id="VBox1" onDragDetected="#initialize" prefHeight="84.0" prefWidth="333.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="nameFood1Label" onDragDetected="#initialize" text="Name of the Food" />
+                        <Label fx:id="price1Label" onDragDetected="#initialize" text="Price" />
+                        <Label fx:id="cook1Label" onDragDetected="#initialize" text="Name of the cook" />
+                        <Label fx:id="rate1Label" onDragDetected="#initialize" text="Rate of the food" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBox5" onDragDetected="#initialize" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                     <children>
+                        <Label fx:id="nameFood5Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="price5Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="cook5Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="rate5Label" onDragDetected="#initialize" text="Label" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBox4" onDragDetected="#initialize" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                     <children>
+                        <Label fx:id="nameFood4Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="price4Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="cook4Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="rate4Label" onDragDetected="#initialize" text="Label" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBox3" onDragDetected="#initialize" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <children>
+                        <Label fx:id="nameFood3Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="price3Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="cook3Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="rate3Label" onDragDetected="#initialize" text="Label" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBox2" onDragDetected="#initialize" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <children>
+                        <Label fx:id="nameFood2Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="price2Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="cook2Label" onDragDetected="#initialize" text="Label" />
+                        <Label fx:id="rate2Label" onDragDetected="#initialize" text="Label" />
+                     </children>
+                  </VBox>
+                  <Label fx:id="food1ImageView" maxHeight="-Infinity" maxWidth="-Infinity" onDragDetected="#initialize" prefHeight="150.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                  <Label fx:id="food2ImageView" maxHeight="-Infinity" maxWidth="-Infinity" onDragDetected="#initialize" prefHeight="150.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                  <Label fx:id="food3ImageView" maxHeight="-Infinity" maxWidth="-Infinity" onDragDetected="#initialize" prefHeight="150.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                  <Label fx:id="food4ImageView" maxHeight="-Infinity" maxWidth="-Infinity" onDragDetected="#initialize" prefHeight="150.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                  <Label fx:id="food5ImageView" maxHeight="-Infinity" maxWidth="-Infinity" onDragDetected="#initialize" prefHeight="150.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                  <Label fx:id="food6ImageView" maxHeight="-Infinity" maxWidth="-Infinity" onDragDetected="#initialize" prefHeight="150.0" prefWidth="350.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                  <VBox fx:id="vBox6" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="11">
+                     <children>
+                        <Label fx:id="nameFood6Label" text="Label" />
+                        <Label fx:id="price6Label" text="Label" />
+                        <Label fx:id="cook6Label" text="Label" />
+                        <Label fx:id="rate6Label" text="Label" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="seeMoreFood1Button" mnemonicParsing="false" onAction="#seeMoreFood1Button1" styleClass="red" text="See More" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Button fx:id="seeMoreFood2Button" mnemonicParsing="false" onAction="#seeMoreFood1Button2" styleClass="red" text="See More" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Button fx:id="seeMoreFood3Button" mnemonicParsing="false" onAction="#seeMoreFood1Button3" styleClass="red" text="See More" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Button fx:id="seeMoreFood4Button" mnemonicParsing="false" onAction="#seeMoreFood1Button4" styleClass="red" text="See More" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                  <Button fx:id="seeMoreFood5Button" mnemonicParsing="false" onAction="#seeMoreFood1Button5" styleClass="red" text="See More" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                  <Button fx:id="seeMoreFood6Button" mnemonicParsing="false" onAction="#seeMoreFood1Button6" styleClass="red" text="See More" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <HBox fx:id="HboxHeader" layoutY="-1.0" onDragDetected="#initialize" prefHeight="89.0" prefWidth="806.0">
+         <children>
+            <Button fx:id="logoButton" mnemonicParsing="false" onAction="#changeToHomePage" prefHeight="81.0" prefWidth="147.0" styleClass="red">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/Y:/Spring%202019/MIS%20768/Group%20Project/src/momsfood/FXMLandControllers/Mom_sFoodLogo(Small).png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Button>
+            <Button fx:id="searchFoodButton" mnemonicParsing="false" onAction="#changeToTheSearchPage" prefHeight="67.0" prefWidth="222.0" styleClass="red" stylesheets="@../MyStyles.css" text="Search Foods">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png" />
+                     </image></ImageView>
+               </graphic>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#00000074" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="profilButton" mnemonicParsing="false" onAction="#changeToProfilePage" prefHeight="67.0" prefWidth="221.0" styleClass="red" stylesheets="@MyStyles.css" text="Profile">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="cartButton" mnemonicParsing="false" onAction="#changeToOrderpage" prefHeight="67.0" prefWidth="223.0" styleClass="red" text="Your Cart">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="red">
+                     <image>
+                        <Image url="@cart.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Label alignment="BOTTOM_CENTER" layoutX="144.0" layoutY="77.0" prefHeight="48.0" prefWidth="541.0" text="Recommended Meals" />
+      <Button fx:id="logOutButton" layoutX="693.0" layoutY="77.0" mnemonicParsing="false" onAction="#logOut" styleClass="red11" text="Log Out" />
+      <Button fx:id="specialRequestButton" layoutX="592.0" layoutY="114.0" mnemonicParsing="false" onAction="#specialRequests" prefHeight="26.0" prefWidth="172.0" styleClass="greywhite11" text="Special Requests Here!" />
+   </children>
+   <stylesheets>
+      <URL value="@MyStyles.css" />
+      <URL value="@../../MyStyles.css" />
+   </stylesheets>
+</AnchorPane>

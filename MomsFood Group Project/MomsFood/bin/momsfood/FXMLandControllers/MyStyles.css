@@ -1,0 +1,226 @@
+.root{
+-fx-background-color:#FFF5EE;
+
+}
+.label {
+   -fx-font-family: "Times New Roman";
+   -fx-font-size: 15pt;
+   -fx-font-style: italic;
+   -fx-font-weight: bold;
+   -fx-border-style: none;
+}
+
+.labelOrderPage{
+   -fx-font-family: "Times New Roman";
+   -fx-font-size: 12pt;
+   -fx-font-style: italic;
+   -fx-font-weight: bold;
+   -fx-border-style: none;
+   -fx-text-fill: red;
+}
+
+.labelOrderDisplayPage{
+	-fx-font-family: "Times New Roman";
+   -fx-font-size: 12pt;
+   -fx-font-style: italic;
+   -fx-font-weight: bold;
+   -fx-border-style: none;
+   -fx-text-fill: Black;
+}
+
+.label.label11 {
+   -fx-font-family: "Times New Roman";
+   -fx-font-size: 11pt;
+   -fx-font-style: italic;
+   -fx-font-weight: bold;
+   -fx-border-style: none;
+}
+
+.label.labelwhite11 {
+   -fx-font-family: "Times New Roman";
+   -fx-font-size: 11pt;
+   -fx-font-style: italic;
+   -fx-font-weight: bold;
+   -fx-border-style: none;
+   -fx-text-fill: white;
+}
+
+.table-view {
+    -fx-base: #E9967A;
+    -fx-control-inner-background: #E9967A;
+    -fx-background-color: #E9967A;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 10pt;
+}
+
+.table-view .column-header .label{
+    -fx-background-color: #800000;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 11pt;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FAEBD7;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.table-view .column-cell {
+    -fx-font-family: "System";
+    -fx-font-size: 11pt;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-border-style: none;
+}
+
+.button.red{
+-fx-font-family: "Times New Roman";
+-fx-font-size: 14pt;
+-fx-background-color:#800000;
+-fx-text-fill:#FAEBD7;
+-fx-font-weight: bold;
+-fx-font-style: italic;
+}
+
+.button.red11{
+-fx-font-family: "Times New Roman";
+-fx-font-size: 11pt;
+-fx-background-color:#800000;
+-fx-text-fill:#FAEBD7;
+-fx-font-weight: bold;
+-fx-font-style: italic;
+}
+
+.button.grey{
+-fx-font-family: "Times New Roman";
+-fx-font-size: 14pt;
+-fx-background-color:#808080;
+-fx-text-fill:#000000;
+-fx-font-weight: bold;
+-fx-font-style: italic;
+}
+
+.button.greywhite{
+-fx-font-family: "Times New Roman";
+-fx-font-size: 14pt;
+-fx-background-color:#808080;
+-fx-text-fill:#ffffff;
+-fx-font-weight: bold;
+-fx-font-style: italic;
+}
+
+.button.grey11{
+-fx-font-family: "Times New Roman";
+-fx-font-size: 11pt;
+-fx-background-color:#808080;
+-fx-text-fill:#000000;
+-fx-font-weight: bold;
+-fx-font-style: italic;
+}
+
+.button.greywhite11{
+-fx-font-family: "Times New Roman";
+-fx-font-size: 11pt;
+-fx-background-color:#808080;
+-fx-text-fill:#ffffff;
+-fx-font-weight: bold;
+-fx-font-style: italic;
+}
+
+.text-field.pink{
+-fx-font-family: "Times New Roman";
+-fx-font-size: 13 pt;
+-fx-background-color:#E9967A;
+-fx-font-weight: bold;
+-fx-text-Fill:#000000;
+	
+}
+
+.text-field.grey{
+-fx-font-family: "Times New Roman";
+-fx-font-size: 13 pt;
+-fx-background-color:C0C0C0;
+-fx-font-weight: bold;
+-fx-text-Fill:000000;
+
+}
+
+.root{
+-fx-background-color:#F5F5F5;
+}
+
+.check-box{
+-fx-font-family: "TimesNewRoman";
+-fx-font-size: 9pt;
+-fx-text-fill:#000000;
+-fx-font-style: italic;
+ -fx-font-weight: bold;
+}
+
+.check-box .box{
+
+-fx-outer-border:#800000;
+-fx-border-color: #800000;
+-fx-shadow-hightlight-color:#800000;
+-fx-border-width     : 5px   ;
+}
+
+.check-box.box4px{
+
+-fx-outer-border:#800000;
+-fx-shadow-hightlight-color:#800000;
+-fx-border-width     : 3px   ;
+}
+
+.radio-button{
+-fx-font-family: "Times New Roman";
+-fx-font-size: 9pt;
+-fx-font-style: italic;
+-fx-text-fill:#000000;
+}
+
+.radio-button.radio11pt{
+-fx-font-family: "Times New Roman";
+-fx-font-size: 11pt;
+-fx-font-style: italic;
+-fx-text-fill:#000000;
+}
+
+.radio-button .radio{
+-fx-border-width     : 5px   ;
+-fx-border-color     : #800000  ;
+-fx-border-radius    : 100px  ;
+
+}
+.radio-button .radio:selected{
+-fx-background-color : white ;
+
+}
+.radio-button -radio:armed{
+-fx-background-color : white ;
+}
+.radio-button -radio:determinate{
+-fx-background-color : white ;
+}
+.radio-button -radio:indeterminate{
+-fx-background-color : white ;
+
+}
+.radio-button.dot {
+    -fx-background-radius: 5px;
+    -fx-background-color : white ;
+    -fx-padding: 1px;
+    -fx-border-color: #800000  ;    
+}
+.menu-button.redmenu {
+	-fx-font-family: "Times New Roman";
+	-fx-font-size: 12pt;
+	-fx-background-color:#800000;
+	-fx-text-fill:#ffffff;
+	-fx-font-weight: bold;
+	-fx-font-style: italic; 
+}

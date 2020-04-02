@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" stylesheets="@../../MyStyles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="momsfood.FXMLandControllers.CustomerProfileController">
+   <children>
+      <ImageView fitHeight="563.0" fitWidth="856.0" layoutX="-2.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@customerProfile.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="updateProfileButton" layoutX="662.0" layoutY="436.0" mnemonicParsing="false" onAction="#updateProfile" styleClass="red11" text="Update Profile" />
+      <Button fx:id="logOutButton" layoutX="668.0" layoutY="90.0" mnemonicParsing="false" onAction="#logOut" prefHeight="26.0" prefWidth="96.0" styleClass="red11" text="Log Out" textFill="ANTIQUEWHITE">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <GridPane id="text-field.pink" layoutX="35.0" layoutY="164.0" prefHeight="298.0" prefWidth="480.0">
+         <children>
+            <TextField fx:id="firstNameTextField" prefHeight="27.0" prefWidth="143.0" styleClass="pink" GridPane.columnIndex="1" />
+            <TextField fx:id="lastNameTextField" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="emailTextField" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="phoneTextField" prefHeight="22.0" prefWidth="135.0" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="passwordTextField" prefHeight="23.0" prefWidth="122.0" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="confirmPasswordTextField" styleClass="pink" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="209.0" styleClass="label11" text="First Name:" />
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="125.0" styleClass="label11" text="Last Name:" GridPane.rowIndex="1" />
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="125.0" styleClass="label11" text="Email Address:" GridPane.rowIndex="2" />
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="125.0" styleClass="label11" text="Phone Number:" GridPane.rowIndex="3" />
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="125.0" styleClass="label11" text="Password:" GridPane.rowIndex="4" />
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="163.0" styleClass="label11" text="Confirm Password (new):" GridPane.rowIndex="5" />
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="125.0" styleClass="label11" text="Physical Address:" GridPane.rowIndex="6" />
+            <TextArea fx:id="addressTextArea" prefHeight="52.0" prefWidth="235.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="145.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="235.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="usernameLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="459.0" layoutY="90.0" prefHeight="27.0" prefWidth="185.0" styleClass="label11" />
+      <HBox fx:id="HboxHeader" alignment="TOP_RIGHT" layoutY="-2.0" onDragDetected="#initialize" prefHeight="67.0" prefWidth="817.0">
+         <children>
+            <Button fx:id="logoButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="92.0" prefWidth="143.0" HBox.hgrow="NEVER">
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/Y:/Spring%202019/MIS%20768/Group%20Project/src/images/Mom_sFoodLogo(Small).png" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Button>
+            <Button fx:id="searchFoodButton" mnemonicParsing="false" onAction="#searchFoods" prefHeight="67.0" prefWidth="222.0" styleClass="red" stylesheets="@../MyStyles.css" text="Search Foods">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profile" prefHeight="67.0" prefWidth="221.0" styleClass="red" stylesheets="@MyStyles.css" text="Profile">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="cartButton" mnemonicParsing="false" onAction="#changeToOrderPage" prefHeight="78.0" prefWidth="223.0" styleClass="red" text="Your Cart">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="red">
+                     <image>
+                        <Image url="@cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

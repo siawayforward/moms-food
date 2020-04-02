@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" stylesheets="@../../../MyStyles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="momsfood.FXMLandControllers.CookAddNewFoodController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="800.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@addmealPicture.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="40.0" fitWidth="500.0" layoutX="129.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@text.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="23.0" layoutY="190.0" prefHeight="205.0" prefWidth="346.0">
+         <children>
+            <Label styleClass="label11" text="Name" />
+            <Label styleClass="label11" text="Category" GridPane.rowIndex="1" />
+            <Label styleClass="label11" text="Meal Country" GridPane.rowIndex="2" />
+            <Label styleClass="label11" text="Price" GridPane.rowIndex="3" />
+            <Label styleClass="label11" text="Picture" GridPane.rowIndex="4" />
+            <TextField fx:id="addFoodNameTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="addPriceTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="addPictureButton" mnemonicParsing="false" onAction="#retrievePicture" styleClass="greywhite11" text="Upload" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="addCategoryComboBox" prefHeight="25.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="addFoodCountryComboBox" editable="true" prefHeight="25.0" prefWidth="215.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.0" minWidth="10.0" prefWidth="137.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="563.0" minWidth="10.0" prefWidth="220.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label layoutX="400.0" layoutY="190.0" styleClass="label11" text="Description" />
+      <ScrollPane layoutX="503.0" layoutY="190.0" prefHeight="136.0" prefWidth="278.0">
+         <content>
+            <TextArea fx:id="descriptionTextArea" prefHeight="135.0" prefWidth="276.0" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="addFoodButton" layoutX="705.0" layoutY="482.0" mnemonicParsing="false" onAction="#addItem" styleClass="red11" text="Add Item" />
+      <Button fx:id="logOutButton" layoutX="708.0" layoutY="93.0" mnemonicParsing="false" onAction="#logOut" styleClass="red11" text="Log Out" />
+      <Button fx:id="logoButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="105.0" prefWidth="120.0" text="Button">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="file:/Y:/Spring%202019/MIS%20768/Group%20Project/src/images/Mom_sFoodLogo(Small).png" />
+               </source>
+            </ImageInput>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="usernameLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="581.0" layoutY="24.0" prefHeight="25.0" prefWidth="200.0" styleClass="pink" />
+      <Label fx:id="ordersLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="481.0" layoutY="54.0" prefHeight="25.0" prefWidth="300.0" styleClass="pink" />
+      <Label fx:id="imagePromptLabel" layoutX="154.0" layoutY="409.0" prefHeight="25.0" prefWidth="605.0" styleClass="label11" />
+      <Label fx:id="countryLabel" contentDisplay="GRAPHIC_ONLY" layoutX="494.0" layoutY="20.0" prefHeight="34.0" prefWidth="64.0">
+         <effect>
+            <ImageInput />
+         </effect>
+      </Label>
+      <Button fx:id="backButton" layoutX="571.0" layoutY="93.0" mnemonicParsing="false" onAction="#updateMeals" prefHeight="26.0" prefWidth="110.0" styleClass="red11" text="Update Items" />
+   </children>
+</AnchorPane>
