@@ -1,0 +1,5 @@
+Java application for food ordering system
+- Java
+- JDBC
+- SQL/XAMPP
+- OOP
